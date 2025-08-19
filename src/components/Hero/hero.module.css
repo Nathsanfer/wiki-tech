@@ -1,0 +1,173 @@
+.hero {
+  width: 75%;
+  height: 40rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.containerInfo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 28px);
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 65px);
+  font-weight: bold;
+  line-height: 1.05;
+}
+
+.description {
+  font-size: clamp(1rem, 1.6vw, 20px);
+  margin: 3rem 0;
+}
+
+.containerImage {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 22rem;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoPessoal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: #4f5ee4b0; 
+  padding: 10px;
+  border-radius: 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.sala {
+  font-size: 16px;
+  margin: 0;
+  color: #ddd;
+}
+
+.githubButton {
+  width: 90%;
+  height: 3rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin: 4rem 0;
+}
+
+.text {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #4f5ee4b0;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.textGithub {
+  font-size: clamp(1rem, 1.5vw, 20px);
+  color: white;
+  margin-left: 15px;
+}
+
+.icon {
+  width: 7%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1200px) {
+  .hero {
+    width: 85%;
+    height: auto;
+  }
+  .containerImage { min-height: 20rem; }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .containerInfo {
+    width: 100%;
+    height: auto;
+  }
+  .githubButton {
+    margin: 2.5rem 0 3rem;
+    width: 100%;
+  }
+  .containerImage {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .profileImage { height: 100%; }
+  .infoPessoal { width: 70%; }
+}
+
+@media (max-width: 680px) {
+  .containerImage { width: 85%; }
+  .infoPessoal { width: 80%; }
+  .hero { margin: 3rem auto; }
+  .subtitle { margin: 1.2rem 0; }
+  .description { margin: 2rem 0; }
+}
+
+@media (max-width: 520px) {
+  .hero { gap: 1.5rem; }
+  .title { line-height: 1.1; }
+  .containerImage { width: 100%; }
+  .infoPessoal {
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+  .githubButton { height: 3.2rem; }
+  .text { width: 100%; }
+  .icon { width: 12%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero, .text, .infoPessoal { transition: none!important; }
+}
+
