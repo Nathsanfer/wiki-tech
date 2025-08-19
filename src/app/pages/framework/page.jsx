@@ -1,5 +1,6 @@
-import Header from "../../../components/Header";
-import SectionTitle from "../../../components/SectionTitle";
+import Header from "@/components/Header";
+import SectionTitle from "@/components/SectionTitle";
+import SectionText from "@/components/SectionText/indes";
 
 export default function Framework() {
   return (
@@ -12,7 +13,10 @@ export default function Framework() {
         title="Frameworks"
         description="É uma .blablabla didididi dado subida canção"
       />
-      <h1>Framework</h1>
+      <SectionText
+        title="O que são Frameworks?"
+        text="Frameworks são estruturas que facilitam o desenvolvimento de software, fornecendo uma base sobre a qual os desenvolvedores podem construir aplicações."
+      />
 
     </div>
   );
