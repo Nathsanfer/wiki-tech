@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import SectionPages from "../components/SectionPages";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <SectionPages />
 
     </div>
   );
