@@ -1,0 +1,108 @@
+/* Card container responsivo */
+.infoCard {
+  --icon-size: clamp(70px, 10vw, 110px);
+  --bar-height: clamp(5.2rem, 12vw, 7rem);
+  width: 75%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCardBar {
+  background: linear-gradient(135deg,#8690ED,#acb3f0);
+  width: 100%;
+  height: var(--bar-height);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCardBar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 30%, rgba(255,255,255,.35), rgba(255,255,255,0) 60%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.infoCardIcon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  position: absolute;
+  top: calc(var(--bar-height) - (var(--icon-size) / 2));
+  left: clamp(18px, 3vw, 35px);
+  z-index: 10;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 18px -6px rgba(0,0,0,.25), 0 2px 6px -2px rgba(0,0,0,.15);
+  padding: 6px;
+  backdrop-filter: blur(3px);
+}
+
+.infoCardContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  gap: .4rem;
+  padding-left: calc(var(--icon-size) + clamp(40px, 6vw, 80px));
+  min-height: calc(var(--bar-height) + var(--icon-size)/2);
+}
+
+.infoCardTitle {
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #1d2144;
+}
+
+.infoCardText {
+  color: #444;
+  font-size: clamp(.9rem, 1.6vw, 1.2rem);
+  line-height: 1.4;
+  max-width: 60ch;
+}
+
+/* ====== Breakpoints ====== */
+@media (max-width: 900px) {
+  .infoCard { width: 85%; }
+  .infoCardContent { padding-left: calc(var(--icon-size) + clamp(32px,5vw,60px)); }
+}
+
+@media (max-width: 680px) {
+  .infoCard { width: 90%; }
+  .infoCardContent { padding-left: calc(var(--icon-size) + clamp(28px,4.5vw,50px)); }
+  .infoCardIcon { padding: 5px; }
+}
+
+@media (max-width: 560px) {
+  .infoCard {
+    width: 92%;
+    margin: 2.5rem auto;
+    --icon-size: clamp(70px, 28vw, 90px);
+    --bar-height: clamp(4.6rem, 18vw, 5.4rem);
+  }
+  .infoCardIcon {
+    position: static;
+    margin: -40px auto 0;
+    display: block;
+    top: auto; left: auto; transform: none;
+  }
+  .infoCardBar { height: var(--bar-height); }
+  .infoCardContent {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 2.2rem;
+    min-height: unset;
+    text-align: center;
+  }
+  .infoCardTitle { margin-top: .2rem; }
+  .infoCardText { margin: 0 auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .infoCardIcon { transition: none!important; }
+}
