@@ -8,7 +8,7 @@ const Header = () => {
           <span>💻</span>
         </div>
         <nav className={styles.nav}>
-          <a href="#" className={styles.active}>
+          <a href="/" className={styles.active}>
             HOME
           </a>
         </nav>

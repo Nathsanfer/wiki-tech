@@ -11,7 +11,7 @@
   font-size: clamp(1.8rem, 3.5vw, 48px);
   font-weight: 700;
   line-height: 1.1;
-  background: linear-gradient(90deg,#4f5ee4,#8d5ae0);
+  background: linear-gradient(90deg,#8690ED,#8d5ae0);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -58,14 +58,14 @@
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
-  background: #4f5ee4;
+  background: #8690ED;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: .95rem;
   font-weight: 700;
   color: #ffffff;
-  box-shadow: 0 2px 6px rgba(79,94,228,.55);
+  box-shadow: 0 2px 6px #8690ED;
   letter-spacing: .5px;
 }
 
@@ -82,13 +82,13 @@
 
 /* Acessibilidade: foco */
 .sectionLinks a:focus-visible {
-  outline: 3px solid #4f5ee4;
+  outline: 3px solid #8690ED;
   outline-offset: 2px;
 }
 
 /* Hover / Active states */
 .sectionLinks a:hover {
-  border-color: #3846c0;
+  border-color: #8690ED;
   box-shadow: 0 6px 16px -4px rgba(79,94,228,.45), 0 3px 6px -2px rgba(0,0,0,.08);
   transform: translateY(-3px);
 }
@@ -109,7 +109,7 @@
     box-shadow: 0 4px 14px -2px rgba(0,0,0,.55), 0 2px 4px -1px rgba(0,0,0,.35);
   }
   .sectionLinks a::before {
-    background: #4f5ee4;
+    background: #8690ED;
     color: #ffffff;
     box-shadow: 0 2px 6px rgba(0,0,0,.55);
   }
