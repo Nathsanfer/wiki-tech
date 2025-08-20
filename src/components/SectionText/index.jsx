@@ -6,7 +6,9 @@ const SectionText = ({ title, text }) => {
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.divisor}></div>
             <div className={styles.containerText}>
-                <p className={styles.text}>{text}</p>
+                {String(text).split('\n').map((paragraph, idx) => (
+                    <p key={idx} className={styles.text}>{paragraph}</p>
+                ))}
             </div>
         </div>
     )

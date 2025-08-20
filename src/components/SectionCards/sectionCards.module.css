@@ -1,0 +1,120 @@
+/* Container principal */
+.container {
+    width: 75%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+.title {
+    font-size: clamp(1.25rem, 2.1vw, 1.9rem);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    line-height: 1.15;
+}
+
+/* Divisor igual ao SectionText */
+.divisor {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg,#8690ED,#acb3f0);
+    margin-bottom: 1.5rem;
+}
+
+/* Grid de cards */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    counter-reset: card;
+}
+
+/* Estilo do card */
+.card {
+    position: relative;
+    padding: 1.4rem 1.4rem 1.4rem 4rem;
+    /* espaço para a bolinha */
+    background: #ffffff;
+    border: 1px solid #4f5ee4;
+    border-radius: 18px;
+    color: #1d2144;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.4;
+    min-height: 5rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px -2px rgba(79, 94, 228, .25), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Número no círculo */
+.card::before {
+    counter-increment: card;
+    content: counter(card, decimal-leading-zero);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #8690ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: 0 2px 6px #8690ED;
+    letter-spacing: .5px;
+}
+
+/* Hover */
+ .card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 16px -4px rgba(79, 94, 228, .45), 0 3px 6px -2px rgba(0, 0, 0, .08);
+ }
+
+@media (max-width: 1800px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 680px) {
+    .container {
+        width: 88%;
+    }
+
+    .cardsGrid {
+        gap: 1.2rem;
+    }
+
+    .card {
+        padding: 1.2rem 1.2rem 1.2rem 3.8rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: 92%;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card::before {
+        left: 0.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}

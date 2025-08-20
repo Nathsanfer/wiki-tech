@@ -1,9 +1,18 @@
 /* Wrapper responsivo */
+/* Wrapper responsivo padronizado */
 .container {
-    width: 70%;
-    max-width: 1100px;
+    width: 75%;
+    max-width: 1400px;
     margin: 2rem auto;
 }
+
+@media (min-width: 1600px) {
+    .container {
+        width: 85%;
+        max-width: 1800px;
+    }
+}
+
 
 .title {
     font-size: clamp(1.25rem, 2.1vw, 1.9rem);
@@ -14,7 +23,7 @@
 
 .divisor {
     width: 100%;
-    height: 3.5px;
+    height: 3px;
     background: linear-gradient(135deg,#8690ED,#acb3f0);
     margin-bottom: 1.5rem;
 }
@@ -23,20 +32,26 @@
     border: 1px solid #ececec;
     padding: clamp(1.2rem, 2.2vw, 1.9rem) clamp(1.4rem, 4.5vw, 3.4rem);
     border-radius: 12px;
-    text-align: center;
 }
 
 .text {
     font-size: clamp(0.95rem, 1.55vw, 1.2rem);
     color: #333;
     line-height: 1.55;
-    max-width: 70ch;
     margin: 0 auto;
+    margin-bottom: 1.2em;
 }
 
-/* Breakpoints alinhados com SectionTitle */
+.text:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1800px) {
+    .container { width: 90%; }
+}
+
 @media (max-width: 900px) {
-    .container { width: 80%; }
+    .container { width: 85%; }
 }
 
 @media (max-width: 680px) {

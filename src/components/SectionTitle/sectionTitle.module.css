@@ -2,9 +2,8 @@
 .infoCard {
   --icon-size: clamp(70px, 10vw, 110px);
   --bar-height: clamp(5.2rem, 12vw, 7rem);
-  width: 75%;
-  max-width: 1200px;
   margin: 3rem auto;
+  width: 75%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -63,16 +62,18 @@
   color: #444;
   font-size: clamp(.9rem, 1.6vw, 1.2rem);
   line-height: 1.4;
-  max-width: 60ch;
 }
 
-/* ====== Breakpoints ====== */
+@media (max-width: 1800px) {
+    .container { width: 90%; }
+}
+
 @media (max-width: 900px) {
   .infoCard { width: 85%; }
   .infoCardContent { padding-left: calc(var(--icon-size) + clamp(32px,5vw,60px)); }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 680px) { 
   .infoCard { width: 90%; }
   .infoCardContent { padding-left: calc(var(--icon-size) + clamp(28px,4.5vw,50px)); }
   .infoCardIcon { padding: 5px; }
@@ -81,10 +82,20 @@
 @media (max-width: 560px) {
   .infoCard {
     width: 92%;
-    margin: 2.5rem auto;
-    --icon-size: clamp(70px, 28vw, 90px);
-    --bar-height: clamp(4.6rem, 18vw, 5.4rem);
+/* Wrapper responsivo padronizado */
+.container {
+  width: 75%;
+  max-width: 1400px;
+  margin: 2rem auto;
+}
   }
+
+@media (min-width: 1600px) {
+  .container {
+    width: 85%;
+    max-width: 1800px;
+  }
+}
   .infoCardIcon {
     position: static;
     margin: -40px auto 0;
