@@ -17,7 +17,7 @@ const Hero = () => {
                     <div className={styles.text}>
                         <h3 className={styles.textGithub}>Acesse meu GitHub!</h3>
                         <div className={styles.icon}>
-                            <img className={styles.img} src="https://cdn-user-icons.flaticon.com/152931/152931908/1755562133433.svg?token=exp=1755559423~hmac=9e790c2faa88926cd7da39f1bcbd4e46" alt="Ícone do GitHub" />
+                            <img className={styles.img} src="https://cdn-user-icons.flaticon.com/46726/46726398/1755712433428.svg?token=exp=1755709714~hmac=4d48f9def02dfe09d4cd61e4d9a6d8e4" alt="Ícone do GitHub" />
                         </div>
                     </div>
 
